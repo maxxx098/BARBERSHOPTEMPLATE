@@ -13,7 +13,7 @@ const [login,setLogin] = useState(false)
         if(type === 'signup'){
           createUserWithEmailAndPassword(database, email, password).then (data => {
             console.log(data,"authData")
-            history('/home')
+            history('/appointment')
           }).catch (err => {
             alert(err.code)
             setLogin(true)
